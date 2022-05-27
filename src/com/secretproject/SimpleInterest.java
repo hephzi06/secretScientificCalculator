@@ -11,20 +11,15 @@ public class SimpleInterest {
         System.out.println("Principal:  ");
         double principal = myInput.nextDouble();
         System.out.println("Rate:  ");
-        float rate =  myInput.nextFloat();
+        float rate =  myInput.nextFloat() / 100;
         System.out.println("Period: ");
         int time = myInput.nextInt();
-        double
         double simpleInterest = principal * rate * time;
         Locale locale = null;
 
         NumberFormat interest = NumberFormat.getCurrencyInstance();
-        String currency = interest.format(simpleInterest);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       v
+        String currency = interest.format(simpleInterest);
         System.out.println(currency);
-
-
-
-
     }
 }
 
