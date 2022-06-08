@@ -58,7 +58,7 @@ public class Calculator {
 
     public void subtraction(){
         Scanner myInput = new Scanner(System.in);
-        System.out.println("How many number should be added");
+        System.out.println("How many number should be subtracted");
         int num = myInput.nextInt();
         double [] numbers= new double[num];
         double subtraction = 0;
@@ -74,10 +74,10 @@ public class Calculator {
     /** multiplication */
     public void multiplication(){
         Scanner myInput = new Scanner(System.in);
-        System.out.println("How many number should be added");
+        System.out.println("How many number should be multiplied");
         int num = myInput.nextInt();
         double [] numbers= new double[num];
-        double multipy = 0;
+        double multipy = 1;
         System.out.println("Enter the numbers");
         for(int i= 0; i < num ; i++){
 
