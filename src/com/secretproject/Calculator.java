@@ -16,7 +16,14 @@ public class Calculator {
                 4. Division\s
                 5. Mortgage\s
                 6. Loan Repayment Scheme\s
-                7. Simple Interest""");
+                7. Simple Interest\s
+                8. Power\s
+                9. Square\s
+                10. Square root\s
+                11. Cube\s
+                12. Prime Number\s
+                13. Round up, ceiling and flooring\s 
+                """);
         Scanner select = new Scanner(System.in);
         byte pick = select.nextByte();
         if(pick == 1){
@@ -33,6 +40,18 @@ public class Calculator {
             loanRepayment();
         }else if(pick == 7){
             simpleInterest();
+        }else if (pick == 8){
+            power();
+        }else if (pick == 9){
+            square();
+        }else if (pick == 10){
+            squareRoot();
+        }else if (pick == 11){
+            cube();
+        }else if (pick == 12){
+            primes();
+        }else if (pick == 13){
+            roundup();
         }
     }
 
@@ -177,6 +196,81 @@ public class Calculator {
         String currency = interest.format(simpleInterest);
         System.out.println(currency);
     }
+
+    /** power **/
+    public void power(){
+        Scanner myInput = new Scanner(System.in);
+        System.out.print("First Number: ");
+        int first = myInput.nextInt();
+        System.out.print("Second Number: ");
+        int second = myInput.nextInt();
+        int answer = (int) Math.pow(first, second);
+        System.out.println(answer);
+
+    }
+    /** square **/
+    public void square(){
+        Scanner myInput = new Scanner(System.in);
+        System.out.print("First Number: ");
+        int first = myInput.nextInt();
+        int answer = (int) Math.pow(first, 2);
+        System.out.println(answer);
+
+    }
+    /** square root **/
+    public void squareRoot(){
+        Scanner myInput = new Scanner(System.in);
+        System.out.print("First Number: ");
+        int first = myInput.nextInt();
+        double answer = Math.sqrt(first);
+        System.out.println(answer);
+    }
+    /** cube **/
+    public void cube(){
+        Scanner myInput = new Scanner(System.in);
+        System.out.print("First Number: ");
+        int first = myInput.nextInt();
+        int answer = (int) Math.pow(first, 3);
+        System.out.println(answer);
+
+    }
+    /** primes **/
+    public void primes(){
+        Scanner myInput = new Scanner(System.in);
+        System.out.print("Number: ");
+        int num = myInput.nextInt();
+        int i = 2;
+        boolean prime = true;
+        while(i <= num/2){
+
+            if(num  % i == 0){
+                prime = false;
+                break;
+            }
+            i++;
+        }
+        if (prime){
+            System.out.println("It is a prime number");
+        }else{
+
+            System.out.println("It is not a prime number");
+        }
+
+
+    }
+    public void roundup(){
+        Scanner myInput = new Scanner(System.in);
+        System.out.print("Number: ");
+        double num = myInput.nextDouble();
+        System.out.println("Rounded up: " + Math.round(num));
+        System.out.println("Ceil up: " + Math.ceil(num));
+        System.out.println("Floor down: " + Math.floor(num));
+
+    }
+
+
+
+
 
 }
 
